@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+  },
+  "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+  },
+  // disabling or configuring some of the rules
+  "rules": {
+      "react/jsx-filename-extension": "off" // or 0
+      // warn or 1 - to show as a warning
+      // error or 2 - to show as an error
+  },
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["Images", "./public/assets"],
+        ["Scss", "./src/styles"]
+      ]
+    }
+  }
+}
