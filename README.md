@@ -14,3 +14,16 @@ Building
 ```sh
 npm run build
 ```
+
+## Testing
+
+Run all tests
+```sh
+npm run test
+npm run test:watch
+```
+
+Show the coverage
+```sh
+npm run test:coverage
+```
