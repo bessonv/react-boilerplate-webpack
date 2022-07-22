@@ -1,7 +1,9 @@
 {
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jest/recommended"
@@ -29,10 +31,15 @@
   ],
   "settings": {
     "import/resolver": {
-      "alias": [
-        ["Images", "./public/assets"],
-        ["Scss", "./src/styles"]
-      ]
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map" : [
+          ["Images", "./public/assets"],
+          ["Scss", "./src/styles"]
+        ]
+      }
     }
   }
 }

@@ -4,29 +4,25 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
-    entry: ["./src/scripts/index.js", "./src/styles/style.scss"],
+    entry: ["./src/scripts/index.tsx", "./src/styles/style.scss"],
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".ts", ".tsx", ".js"],
         alias: {
           Images: path.resolve(__dirname, 'public/assets'),
           Scss: path.resolve(__dirname, 'src/styles')
         },
     },
     output: {
-        path: path.join(__dirname, "dist"), // directory where our output file will be saved
-        filename: "bundle.js", // specifies the name of the output file
-        // assetModuleFilename: 'images/[name][ext]',
+        path: path.join(__dirname, "dist"),
+        filename: "bundle.js",
         clean: true,
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/, // (js|jsx)$ or (ts|tsx)$
-                loader: "babel-loader",
-                options: {
-                    presets: ["@babel/env", "@babel/react"],
-                    plugins: [],
-                }
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
             },
             {
                 test: /\.((c|sa|sc)ss)$/i,
@@ -47,10 +43,10 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({ filename: '[name].css' }),
         new ESLintPlugin({
-          extensions: [".js", ".jsx"]
+          extensions: [".ts", ".tsx"]
         }),
     ],
     devServer: {
-        port: 3000,
+        port: 3001,
     },
 }

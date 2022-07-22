@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "Scss/style.scss";
 import image from 'Images/react.png';
 
