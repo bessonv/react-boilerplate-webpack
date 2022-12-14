@@ -1,0 +1,16 @@
+.title {
+    &__title-box {
+        width: 100%;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 20px;
+        // background: url("../../public/assets/react.png") 100% 100%;
+    }
+
+    &__name {
+        color: #61dafb;
+    }
+}

@@ -4,12 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
-    entry: ["./src/scripts/index.tsx", "./src/styles/style.scss"],
+    entry: ["./src/index.tsx"],
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
         alias: {
           Images: path.resolve(__dirname, 'public/assets'),
-          Scss: path.resolve(__dirname, 'src/styles')
         },
     },
     output: {
@@ -47,6 +46,6 @@ module.exports = {
         }),
     ],
     devServer: {
-        port: 3001,
+        port: 3000,
     },
 }

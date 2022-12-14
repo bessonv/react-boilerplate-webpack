@@ -36,8 +36,7 @@
       },
       "alias": {
         "map" : [
-          ["Images", "./public/assets"],
-          ["Scss", "./src/styles"]
+          ["Images", "./public/assets"]
         ]
       }
     }
