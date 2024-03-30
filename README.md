@@ -1,4 +1,5 @@
-# Reactjs Boilerplate
+# Reactjs Webpack Boilerplate
+Simple test app to use as a boilerplate
 
 ## Installation
 ```sh
