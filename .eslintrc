@@ -22,6 +22,9 @@
   },
   // disabling or configuring some of the rules
   "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "@typescript-eslint/no-var-requires": "off",
       "react/jsx-filename-extension": "off" // or 0
       // warn or 1 - to show as a warning
       // error or 2 - to show as an error
@@ -33,11 +36,6 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      },
-      "alias": {
-        "map" : [
-          ["Images", "./public/assets"]
-        ]
       }
     }
   }
