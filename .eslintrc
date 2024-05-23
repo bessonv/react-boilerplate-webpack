@@ -1,42 +1,27 @@
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
   "extends": [
-    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
+    "plugin:eslint-plugin-react/recommended",
+    "plugin:eslint-plugin-react-hooks/recommended",
     "plugin:jest/recommended"
   ],
-  "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-  },
-  "env": {
-      "node": true,
-      "browser": true,
-      "es6": true
-  },
-  // disabling or configuring some of the rules
   "rules": {
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "@typescript-eslint/no-var-requires": "off",
-      "react/jsx-filename-extension": "off" // or 0
-      // warn or 1 - to show as a warning
-      // error or 2 - to show as an error
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/jsx-filename-extension": "off" // or 0
+    // warn or 1 - to show as a warning
+    // error or 2 - to show as an error
   },
   "ignorePatterns": [
     "node_modules/"
   ],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+    "react": {
+      "version": "18.2"
     }
   }
 }

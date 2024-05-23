@@ -7,6 +7,9 @@ module.exports = {
     entry: path.resolve(__dirname, 'src/index.tsx'),
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
+        alias: {
+            "@components": path.resolve(__dirname, "src/components")
+        }
     },
     output: {
         path: path.join(__dirname, "dist"),
@@ -28,7 +31,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
             },
-        ],
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({

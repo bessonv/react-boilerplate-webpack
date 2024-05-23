@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.scss";
-import { Input } from "./components";
 import image from "./assets/react.png";
+import { Input } from "@components";
 
 const App = () => {
   const [name, setName] = useState<string>("World");
